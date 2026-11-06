@@ -16,12 +16,8 @@ public class CellUI {
         simulation.createRandomCells(10);
         canvas.add(simulation);
 
-        //noinspection InfiniteLoopStatement
-        while (true) {
+        canvas.animate(() -> {
             simulation.update();
-
-            canvas.draw();
-            canvas.pause(17);
-        }
+        });
     }
 }
